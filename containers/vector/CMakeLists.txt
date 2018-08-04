@@ -9,5 +9,5 @@ endif(USE_CLANG)
 set(CMAKE_CXX_STANDARD 14)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
-project (memory)
-add_executable(memory main.cpp)
+project (vector)
+add_executable(vector main.cpp)

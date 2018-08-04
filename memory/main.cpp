@@ -43,7 +43,7 @@ void shared(std::shared_ptr<test> param)
 
 void test_shared()
 {
-    //shared_ptr
+    /* shared_ptr */
     std::cout << fg::green << "shared_ptr" << fg::reset << style::reset << std::endl;
     std::shared_ptr<char> sp( new char[100], std::default_delete<char[]>());
 
@@ -55,10 +55,9 @@ void test_shared()
     shared(strptr);
 }
 
-
 void test_unique()
 {
-    //unique_ptr
+    /* unique_ptr */
     std::cout << fg::green << "unique_ptr" << fg::reset << std::endl;
     std::unique_ptr<test> strunptr = std::make_unique<test>("Unique");
     std::unique_ptr<test> strunptr2;
@@ -70,7 +69,7 @@ void test_unique()
 
 void test_weak()
 {
-    //weak_ptr
+    /* weak_ptr */
     std::cout << fg::green  << "weak_ptr" << fg::reset << std::endl;
     std::shared_ptr<test> strptr = std::make_shared<test>("Shared");
     std::weak_ptr<test> strweakptr(strptr);
