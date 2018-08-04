@@ -23,6 +23,9 @@ int main (int argc, char *argv[])
     cout << "Exist:" << simpleMap.count("test") << endl;
     cout << "Exist not:" << simpleMap.count("test2") << endl;
 
+    /* Initializer */
+    std::map<std::string, int> initMap = {{"test", 1}, {"test2", 2}};
+    
     /* Simple string int unordered_map */
     std::unordered_map<std::string, int> unorderedMap;
     cout << "Size:" << unorderedMap.size() << endl;
