@@ -19,8 +19,8 @@ int main (int argc, char *argv[])
 
     /* Pre allocated vector */
     vector<int> sizedVector(10, 88);
-    cout << "Size:" << simpleVector.size() << endl;
-    cout << "Value:" << simpleVector[0] << endl;
+    cout << "Size:" << sizedVector.size() << endl;
+    cout << "Value:" << sizedVector[0] << endl;
 
     /* Vector static initializer */
     vector<int> initializedVector = {1, 2, 3, 4};
