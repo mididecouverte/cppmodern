@@ -9,5 +9,5 @@ endif(USE_CLANG)
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
-project (multiplereturn)
-add_executable(multiplereturn main.cpp)
+project (any)
+add_executable(any main.cpp)
