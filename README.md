@@ -1,1 +1,5 @@
 # cppmodern
+
+Requirements:
+cmake
+clang
