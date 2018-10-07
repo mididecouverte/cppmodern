@@ -6,7 +6,7 @@ using namespace std;
 
 int main (int argc, char *argv[])
 {
-    /* Simple int list */
+    /* Simple int set */
     set<int> simpleSet;
     cout << "Size:" << simpleSet.size() << endl;
 

@@ -64,7 +64,6 @@ void test_unique()
     strunptr2 = std::move(strunptr);
     std::cout << "Pointer1:" << std::hex << (long long)strunptr.get() << std::dec << std::endl;
     std::cout << "Pointer2:" << std::hex << (long long)strunptr2.get() << std::dec   << std::endl;
-
 }
 
 void test_weak()
