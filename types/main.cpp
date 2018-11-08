@@ -1,8 +1,10 @@
 #include <string>
 #include <iostream>
 #include <typeinfo>
+#include <map>
 #include <memory>
 #include <cstdint>
+#include <vector>
 
 void function(double* pd)
 {
@@ -20,13 +22,19 @@ int main (int argc, char *argv[])
     auto text = std::string("test");
     std::cout << "Type:" << typeid(text).name() << " Value:" << text << std::endl;
 
+    std::map<std::uint16_t, std::string> myMap;
+    // fill map
+    std::map<std::uint16_t, std::string>::iterator it = myMap.find(42);
+    auto it2 = myMap.find(42);
+
+
     /* nullptr */
     std::shared_ptr<std::string> testnullsmartptr = nullptr;
     std::string* testnullptr = nullptr;
 
     /* nullptr_t */
-    double *dp;
-    function(dp);
+    double dp = 3.1416;
+    function(&dp);
     function(nullptr);
 
     /* Strongly typed enumerations */
