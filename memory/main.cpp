@@ -47,7 +47,7 @@ void test_shared()
     std::cout << fg::green << "shared_ptr" << fg::reset << style::reset << std::endl;
     std::shared_ptr<char> sp( new char[100], std::default_delete<char[]>());
 
-    std::shared_ptr<test> strptr = std::make_shared<test>("Shared");
+    auto strptr = std::make_shared<test>("Shared");
     std::cout << "Value:" << (std::string)*strptr << std::endl;
     std::cout << "Value:" << strptr->text() << std::endl;
     std::cout << "Value:" << strptr.get()->text() << std::endl;
@@ -59,7 +59,8 @@ void test_unique()
 {
     /* unique_ptr */
     std::cout << fg::green << "unique_ptr" << fg::reset << std::endl;
-    std::unique_ptr<test> strunptr = std::make_unique<test>("Unique");
+    auto strunptr = std::make_unique<test>("Unique");
+    auto testarr = std::make_unique<char[]>(100);
     std::unique_ptr<test> strunptr2;
     strunptr2 = std::move(strunptr);
     std::cout << "Pointer1:" << std::hex << (long long)strunptr.get() << std::dec << std::endl;
